@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 200;
+    src: url(fonts/21.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 300;
+    src: url(fonts/22.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/23.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 500;
+    src: url(fonts/24.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    src: url(fonts/25.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/26.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 200;
+    src: url(fonts/27.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 300;
+    src: url(fonts/28.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 400;
+    src: url(fonts/29.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 500;
+    src: url(fonts/30.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 600;
+    src: url(fonts/31.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 200;
+    src: url(fonts/32.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    src: url(fonts/33.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/34.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    src: url(fonts/35.ttf)format("truetype")
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    src: url(fonts/36.ttf)format("truetype")
+}

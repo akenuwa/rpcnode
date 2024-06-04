@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "stm";
+    src: url(fonts/18.ttf)format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+i[class^="stm-"] {
+    font-family: "stm" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.stm-ia_clock:before {
+    content: ""
+}
+
+.stm-loans_mobile:before {
+    content: ""
+}
+
+.stm-marketplace:before {
+    content: ""
+}
+
+.stm-btc_public:before {
+    content: ""
+}
+
+.stm-crypto_secured:before {
+    content: ""
+}
+
+.stm-stm14_calc:before {
+    content: ""
+}
+
+.stm-building6:before {
+    content: ""
+}
+
+.stm-plus:before {
+    content: ""
+}
+
+.stm-chart-refresh:before {
+    content: ""
+}
+
+.stm-chart-monitor:before {
+    content: ""
+}
+
+.stm-oil:before {
+    content: ""
+}
+
+.stm-rating_down:before {
+    content: ""
+}
+
+.stm-stats:before {
+    content: ""
+}
+
+.stm-marker:before {
+    content: ""
+}
+
+.stm-check:before {
+    content: ""
+}
+
+.stm-lamp:before {
+    content: ""
+}
